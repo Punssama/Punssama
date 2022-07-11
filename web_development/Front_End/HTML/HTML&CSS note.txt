@@ -1,0 +1,389 @@
+note: <thẻ mở></thẻ đóng>
+
+Ex: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    
+<body>
+    <h1>HELLO WORLD<h1>
+    <p>Hello guys<p>
+    <div class = "box">
+        <h2 class = "heading2">Heading 2</h2>
+    </div>
+    
+    <script src = "./main.js"></script>
+</body>
+
+1.Các thẻ thông dụng trong làm web
+    1.1 thẻ head <heading></tiêu đề>
+    
+    1.2 thẻ p <paragraph></đoạn văn>
+
+    1.3 thẻ img <image></hình ảnh>
+        <img>src="your image link" alt"the text shown whenenver the image is damaged"</img>
+        
+    1.4 thẻ a <anchor></thẻ đặt liên kết>
+        <a href="your link">your link name</a>
+
+    1.5 thẻ table<table></lập bảng>
+        <table>
+    <tr>
+    <thead>
+        <th>STT</th>
+        <th>Advantages</th>
+
+    </thead>
+   
+    </tr>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Học theo lộ trình rõ ràng, bài bản</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Ví dụ trực quan, có thực hành sau mỗi bài lý thuyết</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Nội dung video dễ hiểu</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Người hướng dẫn tâm huyết</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Âm thanh, hình ảnh chất lượng cao</td>
+        </tr>
+    </tbody>
+</table>
+
+    OUTPUT:
+STT	Advantages
+1	Học theo lộ trình rõ ràng, bài bản
+2	Ví dụ trực quan, có thực hành sau mỗi bài lý thuyết
+3	Nội dung video dễ hiểu
+4	Người hướng dẫn tâm huyết
+5	Âm thanh, hình ảnh chất lượng cao
+
+1.6 thẻ ul,li, ol <unordered list, list, list with index><danh sách tùy chỉnh, và danh sách>
+    <ul>
+    <li>Học theo lộ trình rõ ràng, bài bản</li>
+    <li>Ví dụ trực quan, có thực hành sau mỗi bài lý thuyết</li>
+    <li>Nội dung video dễ hiểu</li>
+    <li>Người hướng dẫn tâm huyết</li>
+    <li>Âm thanh, hình ảnh chất lượng cao</li>
+</ul>
+    OUTPUT:
+            .Học theo lộ trình rõ ràng, bài bản
+            .Ví dụ trực quan, có thực hành sau mỗi bài lý thuyết
+            .Nội dung video dễ hiểu
+            .Người hướng dẫn tâm huyết
+            .Âm thanh, hình ảnh chất lượng cao
+
+1.7 thẻ input <input></nhap value>
+        <input name = "your input box name" type="type of input box">
+
+1.8 thẻ button <button></tạo ra nút>
+        <button>your button name</button>
+
+1.9 thẻ div <div></tạo ra một vùng bao quanh nội dung>
+        <div>
+            <ul>
+                <li>Học theo lộ trình rõ ràng, bài bản</li>
+                <li>Ví dụ trực quan, có thực hành sau mỗi bài lý thuyết</li>
+                <li>Nội dung video dễ hiểu</li>
+                <li>Người hướng dẫn tâm huyết</li>
+                <li>Âm thanh, hình ảnh chất lượng cao</li>
+            </ul>
+        </div>
+
+    OUTPUT: same as ul, li tag but with a zone cover
+
+2.HTML attribute
+    là thuộc tính để thêm vào thẻ
+    EX: <h1 title = "This is heading"></h1>
+        title chính là attribute
+
+3.Sử dụng CSS trong HTML
+    có 3 cách:
+    -Internal viết ở trong nội dung của tag ví dụ: <style> h1 {nội dung cần thay đổi}</style>
+    -External link file CSS
+    -Inline viết như một attribute
+    
+4.ID và Class (thuộc CSS selector)
+    4.1 ID
+    dùng dấu #để select id
+    EX: <div>
+             <h1 id="first-heading">helloworld</h1></div>
+    
+    #fisrt-heading{
+        color: red
+    }
+
+    OUTPUT: helloworld chuyển thành màu đỏ
+
+    *Đặt id không được trùng nhau
+
+    4.2 Class
+        Dùng dấu chấm để select class
+
+        <div>
+             <h1 class="first-heading">helloworld1</h1>
+             <h2 class="first-heading">helloworld2</h1>
+             <h3 class="first-heading">helloworld3</h1>
+                                                </div>
+
+         EX: .first-heading {
+                    color:green
+                }
+
+                OUTPUT: helloworld1,helloworld2,helloworld3 đều màu green
+
+                *Mỗi thẻ có nhiều class và mỗi class cách nhau bằng một khoảng trắng
+    
+        EX:<p class="p1-normal">Đoạn văn 1</p>
+            <p class="p1-normal">Đoạn văn 2</p>
+            <p class="p1-normal(class1) p2-red(class2)">Đoạn văn 3</p>
+            <p class="p1-normal p2-red">Đoạn văn 4</p>
+            <style>
+                .p1-normal {
+                    color: green;
+            
+                }
+
+                /* Lưu ý, các tên class viết liền nhau, không có khoảng trắng */
+                .p1-normal.p2-red {
+                    color: red;
+                                }
+            </style>
+
+        *CSS cho các thẻ con
+            EX:
+                <p class="children-1">Đoạn văn 1 (không parent)</p>
+                <p class="children-2">Đoạn văn 2 (không parent)</p>
+
+                <div class="parent">
+                    <p>Đoạn văn 1 (parent 1)</p>
+                    <p class="children-1">Đoạn văn 1 (con của .parent)</p>
+                    <p class="children-2">Đoạn văn 2 (con của .parent)</p>
+                </div>
+
+                <style>
+                    /* Chọn tất cả thẻ "p" là con của thẻ có class "parent" */
+                    .parent p {
+                        color: 
+                green;
+                    }
+
+                    /* Chọn tất cả thẻ có class "children-1" là con của thẻ có class "parent" */
+                    .parent .children-1 {
+                        color: 
+                red;
+                    }
+                </style>
+
+    5.Độ ưu tiên trong CSS
+        Selector Method - scores
+                Internal - ?
+                External - ?
+                Inline   - 1000
+                #id      - 100
+                .class   - 10
+                tag      - 1
+                
+        Cái nào có số điểm cao hơn thì sẽ được ưu tiên
+
+        Equal specficity
+        
+        Khi giống nhau về cách gọi thì cái nào mới hơn sẽ được ưu tiên
+
+        có tính chất cộng khi gọi chồng các selector trên nhau
+
+        -Universal selector and inherited
+           Universal * : gọi đến tất cả các thẻ không có cái nào được ưu tiên
+
+           inherited (kế thừa): gọi đến thẻ cha và thay đổi thì sẽ thay đổi tất cả các thẻ con
+
+        * nếu có !important sau nội dung trong tag thì tag đó sẽ đặc biệt được ưu tiên
+        
+    6.CSS variable
+      EX:
+        :root {
+             --text-color: red
+         }
+        h1 {
+            color: var(--text-color)
+        }
+
+        OUTPUT: nội dung trong thẻ h1 được đổi thành màu đỏ
+
+        tạo biến trong lớp giả root thì biến đỏ sẽ là biến global
+
+        còn khi tạo biến trong 1 selector cụ thể thì biến sẽ là local
+
+    7.Các đơn vị trong CSS (đơn vị không phụ thuộc vào gì cả)
+        Absolute units: đơn vị tuyệt đối
+        -px (pixel): width: 100px
+        Relative units: đơn vị tương đối (unit phụ thuộc vào thẻ chứa nó)
+       
+        -%: EX: width: 50%
+
+        -em: phụ thuộc vào thuộc tính đã được định nghĩa trong thẻ gần nhất
+
+        -rem: luôn phụ thuộc vào thẻ HTML
+
+        -vw, vh (viewport width, viewport height): không thay đổi kích thước theo thẻ chứa nó 
+         EX: width: 50vw thì dù có kéo cửa sổ browser đi đâu thì độ dài nội dung vẫn là 50%
+
+    8.CSS function
+        -hàm var()
+
+        -hàm linear-gradient()
+
+        -hàm rgba()
+
+        -hàm rgb(tỉ lệ pha trộn màu)
+        EX: background: rgb(255,255,255)
+
+        -hàm calc(tính toán)
+        EX: width: calc(80+20)
+
+        -hàm attr(attribute))
+    
+    9.CSS padding
+    Dùng để làm dày hoặc mỏng nội dung
+        padding-top
+        padding-right
+        padding-bottom
+        padding-left
+
+        EX: padding-top: 10px
+
+        khi có một giá trị truyền vào padding thì nó sẽ đệm cho cả 4 cạnh
+        EX: padding: 100px
+
+        shorthand: khi truyền vào thêm padding thì nó sẽ đệm 
+        thứ tự giá trị thứ 1 là bên trên và bên dưới, giá trị thứ 2 là trái phải
+
+        *nếu mà trên 3 giá trị thì nó sẽ đệm theo chiều kim đồng hồ
+    
+    10.CSS border
+    Dùng để tạo border
+    các vị trí của border
+        border-width
+        border-style
+        border-color        
+        border-left-width
+        border-right-width
+        border-top-width
+        border-bottom-width
+        
+        EX: border-width: 10px
+            border-style: solid
+
+        shorthand: 
+            border: kích cỡ kiểu màu //không có dấu phấy giữa các giá trị
+            áp dụng tương tự với các vị trí border 
+
+    11.CSS margin
+        Dùng để tạo khoảng cách
+        margin- các hướng
+
+        shorthand:
+                    margin: tương tự như padding
+    
+    12.Box-sizing
+        Dùng để thay đổi kích thước Box
+
+        cách hoạt động: chiều ngang elements + border + padding
+                        nó sẽ tự động tính toán để cho box về kích thước đã định sẵn
+
+        *Nếu đặt padding hoặc border quá lớn thì nó sẽ không hoạt động được
+
+        syntax: box-sizing: content-box (trở về như khi không set box-sizing)
+                box-sizing: border-box (áp dụng box-sizing)
+                box-sizing: unset(để hủy)
+
+    13.Pseudo classes (lớp giả)
+        Cú pháp :lớp gỉa
+
+        Một số lớp giả:
+        :root (truy cập vào thẻ html)
+
+        :hover (tác dụng khi di chuột vào)
+
+        :active (tác dụng khi bấm chuột)
+
+        :first-child (truy cập vào thẻ con đầu tiên)
+
+        :last-child (truy cập vào thẻ con cuối cùng)  
+
+    14.Pseudo elements (phần tử giả)
+        Cú pháp ::phần tử giả
+
+        Một số phần tử giả
+        ::before
+
+        ::after
+
+        ::first-letter (truy cập vào từ đầu tiên)
+
+        ::first-line (truy cập vào dòng đầu tiên)
+
+        ::selection (truy cập vào khi bôi đen)
+
+    15.Background clip
+        Dùng để đổ màu nền
+
+        Syntax: background-clip: kiểu đổ
+
+        các kiểu đổ: border-box (đổ màu từ border)
+
+                    padding-box (đổ màu từ padding)
+
+                     content-box (đổ màu từ content)
+
+    16.Background clip
+        Dùng để đặt ảnh nền
+
+        Syntax: background-image: url(link anh)
+                *muốn thêm nhiều ảnh thì thêm dấu phẩy rồi lặp lại url()
+
+        Muốn set background size:
+                background-size: ..px
+
+        Muốn ảnh không bị repeat:
+                background-repeat: no-repeat
+                
+        Tạo ra dải màu xoay linear-gradient(hướng xoay, màu, màu)
+
+        *Muốn lồng thêm ảnh thì làm tương tự như lồng ảnh ảnh
+
+    17.Background size keyword
+        các keywords
+            background-size: contain (lấy chiều dài nhất của bức ảnh để đè lên với điều kiện ảnh không bị cắt xén)
+
+            background-size: cover (lấy chiều dài hoặc chiều rộng nhất của bức ảnh và đè lên nhưng sẽ đè toàn bộ background cho dù ảnh có bị cắt)
+
+    18.Background-origin
+        Syntax: background-border: kiểu đổ
+
+        các kiểu đổ: border-box (đổ ảnh từ border)
+
+                    padding-box (đổ ảnh từ padding)
+
+                     content-box (đổ ảnh  từ content)
+
+
+

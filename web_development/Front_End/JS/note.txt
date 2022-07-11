@@ -1,0 +1,864 @@
+1<>Dau trong toan tu
+    + ==> plus
+    _ ==> minus 
+    * ==> time
+    / ==> divide
+    % ==> chia lay so du 
+    ** ==> luy thua
+    ++ ==> tang mot gia tri so 
+    -- ==> giam mot gia tri so 
+
+2<>Toan tu gan
+    = ==> gan gia tri ben phai cho ben trai
+    x += y ==> x = x+y  
+    x -= y ==> x = x-y
+    x *= y ==> x = x*y
+    x /= y ==> x = x/y
+
+3<>Toan tu logic
+    && ==> and
+    || ==> or
+    ! ==> not
+
+4<>Kieu du lieu
+    1.Du lieu dang nguyen thuy-Primitive Data
+        -Number
+        -String
+        -Boolean
+
+            ++ co 6 giu lieu tra ve false:0,null,undefind,'',NaN,false
+
+        -Undifined
+        -Null[nothing :))))))]
+        -Symbol - [ex: var id = Symbol('id'); co dac tinh la Unique]
+    2.Du lieu phuc tap-Complex Data
+        -Function (kha la giong def ben python)
+        -Object 
+    3.Kiem tra kieu du lieu - check the type of Data
+        -console.log(typeof a)
+            a la variable
+
+5<>Toan tu so sanh
+    == : so sanh bang (chi quan tam den value)
+    != : so sanh khac (chi quan tam den value)
+    ===: so sanh bang tuyet doi (so sanh ca data type) 
+    !==: so sanh khac tuyet doi (so sanh ca data type)
+
+6<>Ham-Function(phuong thuc)
+    con lai la thuoc tinh
+
+    -moi ham deu co mot contaxt rieng hay co the hieu la co mot ngu canh rieng de chay
+
+    -Function co tinh private
+    -co the dinh nghia bien trong Ham
+    -quy mo hoat dong cua bien chi o trong Function
+    -co the dinh nghia ham trong ham 
+    >< Cac loai Function
+        1/Declaration Function (co the dat ten cho Function hoac khong && ham co the goi truoc dinh nghia)
+
+        2/Expression Function
+            -EX: myFunction = function () {console.log("hello world")} [ham ko the goi trc dinh nghia]
+
+        3/Arrow Function 
+
+7<>Tim hieu sau ve DATA TYPE
+    1.String
+        -cac cach tao chuoi:
+            >var Str = 'string'
+            >var Str = new String('string')
+
+        *kiem tra data type: dung typeof + variable
+
+        -mot so case su dung backslash(\)
+         EX: fullName = "Huy Phong la \" bad boiz \""
+            output: Huy Phon la "bad boiz"
+
+        \\ = \
+
+        -cach xem do dai cua chuoi
+         them .length vao sau ten bien
+         EX:console.log(fullName.length) 
+
+        -co the dung dau cong giua cac string de xuong dong cac string
+        EX: var xuongdong = "Dang"    
+                            +"HUY"
+                            +"Phong"
+
+        -template string
+        `${str}`
+        EX: var str = 'hello world'
+        console.log(`${str}`)
+
+        out put:hello world
+
+        >< lam viec voi chuoi
+        1.length (kiem tra do dai chuoi)
+            -console.log(str.length)
+        
+        2.find index (tim kiem ki tu)
+            -console.log(str.indexOf('chu cai can tim'))
+
+            -neu muon tim mot chu o vi tri sau vi tri chu cai can tim thi them dau phay sau chu cai can tim sau do them stt
+            EX:console.log(str.indexOf('chu cai can tim',stt))
+
+            -tim chu cai cuoi cung thi dung Last Index Of
+
+        3.cut string(cat chuoi)
+            -variable.slice(vi tri bat dau, vi tri ket thuc) 
+            EX:console.log(str.slice(0,2))
+
+            -cat nguoc tu phai sang trai dem thanh so am
+
+        4.replace(thay the trong chuoi)
+            -variable.replace(chu can thay the, chu thay the)
+            console.log(str.replace(tu can thay,tu thay))
+
+            -neu muon thay the tat ca cac chu/tu giong nhau
+
+            console.log(str.replace(/tu can thay/g, tu thay))
+
+        5.convert to upper case(viet chu hoa)
+            -variable.toUpperCase()
+
+        6.convert to lower case
+            -variable.toLowerCase()
+
+        7.Trim(dung de xoa khoang trang thua o 2 dau string)
+            -variable.trim()
+
+        8.Split(cat 1 string thanh mo array)
+            -can tim diem chung cua string
+            variable.split('diem chung')
+
+            -neu muon cat tung chu cai ra thi chi can truyen vao '' la diem chung
+
+        9.Get a character by index(lay mot chu o index cho truoc)
+            -variable.charArt(vi tri muon lay)
+
+            -co the dung dau ngoac vuong [vi tri muon lay]
+        10.Includes method
+            Kiem tra xem tu hoac chu co trong string ko
+            Ex: var title = 'Huy Phong Dang ne';
+
+            console.log(title.includes('Huy', doi so thu 2 la vi tri bat dau tim kiem))//Output: True
+
+    2.Number
+        1.lam viec voi so 
+            muon kiem tra xem so co phai NaN hay ko thi dung phuong thuc: isNaN(ket qua chuyen vao)
+        
+        2.chuyen number thanh string
+            variable.toString()
+        
+        3.lam tron so thap phan
+            variable.toFixed()
+            *phuong thuc nay se doi data type thanh string va lam tron so tu nho hon 0,5 
+            EX:3,5 ==> 3
+
+8<> Array(mang)
+    -do dai mang: ten mang.length
+    -truy suat phan tu trong mang: ten mang[index]
+
+    >< lam viec voi Array
+        -To string (chuyen du lieu tu Array thanh String)
+         ten mang.toString()
+        
+        -Join (them phan tu ngan cach giua cac phan tu trong String dc chuyen tu Array)
+         ten mang.join(phan tu can them vao)
+        
+        -Pop (xoa di phan tu cuoi mang va tra ve phan tu do)
+         ten mang.pop()
+        
+        -Push (them mot hoac nhieu phan tu vao cuoi mang)
+         ten mang.push(phan tu can them)
+
+        -Shift (xoa di phan tu dau mang)
+         ten mang.shift()
+
+        -Unshift (them mot hoac nhieu phan tu vao dau mang)
+         ten mang.unshift(phan tu can them)
+
+        -Splicing (xoa, cat, xen phan tu moi vao mang)
+         +xoa: ten mang.splice(thu tu cua phan tu bat dau, so phan tu muon xoa)
+
+         +xen phan tu: ten mang.splice(vi tri phan tu bat dau, so phan tu can xoa, phan tu can xen vao)
+
+        -Concat (noi Array)
+         ten mang.concat(ten mang can noi)
+
+        -Slicing (cat phan tu trong mang)
+         ten mang.slice(thu tu bat dau phan tu can cat, vi tri ket thuc phan tu can cat)
+        
+        -forEach() (duyệt qua tung phan tu cua mang)//1\\
+         ten mang.forEach()
+         *truyen ham vao qua tham so // Call Back
+         Ex:ten mang.foreach(function(course, index))// tra ra 2 phan tu value va index
+
+        -every() (kiem tra tat ca cac phan tu thoa man mot dieu kien j do)
+        ten mang.every()// gia tri tra ve la boolen
+
+        -some() (kiem tra mot so phan tu trong  mang xem co thoa man dieu kien ko)
+        ten mang.some()
+
+        -find() (tim mot value trong mang)
+        ten mang.find()
+
+        -filter() (tra ve tat ca cac gia tri thoa man dieu kien trong mang)
+        ten mang.filter()
+
+        -map() (de chuyen doi cac phan tu trong mang)
+        Ex:myAr = [
+                    {
+                        language: 'python',
+                        id:  1,
+                                            },
+                    {
+                        language: 'JS',
+                        id: 2,
+                                            },
+                    {
+                        language: 'ruby',
+                        id: 3,
+                                            }]
+
+                    function newLang(myArs) {
+                        return {
+                        language: myArs.language,
+                        id: myArs.id,
+                        course: `Khoa hoc: ${myArs.language}`,
+                        author: 'Huy Phong' }
+                                               }
+                                           
+                        var newar = myAr.map(newLang)
+
+                        console.log(newar)//output: them vao hoac thay doi cac phan tu trong func newlang                                     
+
+
+
+                  
+        -reduce() (la phuong thuc su dung bien tich luy de thu ve gia tri duy nhat khi lap qua cac phan tu cua mang)//2\\
+            Ex:
+                var coin = [
+                {
+                    PHP: 180 coin
+                },
+                {
+                    Python: 180 coin
+                }]
+ô
+                
+                
+                
+                fuction coinHandler('accumulator//bien luu tru', 'currentValue//gia tri hien tai', 'currentIndex//chi muc', 'OrigiArray//Array goc'  ) {
+                    i++;
+
+                    condolr
+                } 
+
+                var totalCoin = coin.reduce(function ==> coinHandler, gia tri khoi tao(initial value//gia tri ko bat buoc,va khi khong co intitial value thi se lay value dau tien cua mang lam gia tri khoi tao) ==> 0)
+
+                *O lan chay dau tien thi bien luu tru se lay gia tri cua initial value, va trong fuction return cai gi thi se luu tru cai do
+
+            tu //1\\ den //2\\ phai dung voi fuction va deu lap qua tat ca cac value trong mang
+        -includes method
+            var courses = ['JS', 'Python', 'Ruby'];
+
+            console.log(courses.include('JS'), doi so thu 2 la vi tri bat dau tim kiem)//Output: True
+
+
+
+9<>Object
+    -Ex: var Object = {
+        myname: "huy phong"
+        age: 16
+    }
+    (cac tu nhu 'myname' va 'age' duoc goi la key)
+
+
+    -cach them gia tri moi vao Object
+        Ten object.(ten cua key moi)
+        Ex: Object.school = 'THPT Ngo Thi Nham'
+
+    -cach lay gia tri trong Object
+        Ten object.(ten key)
+        Ex: console.log(Object.myname)
+
+    *ngoai ra con co the dua key duoi dang string
+        Ex: console.log(Object['ten cua key'])
+
+    -cach dung bien lam key trong Object
+        Ex: Mymail = 'email'
+
+        var Object = {
+        myname: "huy phong"
+        age: 16
+        [Mymail]:'huyphong@gmail.com'
+    }
+
+    -dung 'function' lam key
+
+        var Object = {
+        myname: "huy phong"
+        age: 16
+        getName: function() {
+            return this.myname (this chinh la Object)
+        }
+    }
+    console.log(Object.getName())
+
+10<>Object constructor (xay dung doi tuong)
+
+ no giong nhu xay dung ban thiet ke cho mot ngoi nha
+
+ Ex: function User(firstname, lastname, avatar) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.avatar = avatar;
+ }
+
+var author = new User('Phong','Dang','Avatar');
+
+11<>Object prototype
+
+add thuoc tinh khi ham tao da duoc tao replace
+Ex: User.prototype.program = 'Hello world'
+    console.log(author.program)//Output: Hello world 
+12<>Date(thoi gian)
+    -co kieu la mot doi tuong
+
+    -khoi tao var date = new Date()
+        var year = date.getFullYear();
+        var moth = getMonth() + 1;
+        var day = date.getDate();
+13<>Math Object
+    -Math.PI: tra ve so PI
+
+    -Math.round(): lam tron
+
+    -Math.abs(absolute): gia tri tuyet doi
+
+    -Math.ceil(): Lam tron len (ke ca so sau dau phay co nho hon 5)
+
+    -Math.floor(): Lam tron xuong
+
+    -Math.random(): tra ve so thap phan ngau nhien nho hon 1 (co the su dung voi ham lam tron)
+
+    -Math.min():cho ra so nho nhat
+
+    -Math.max():cho ra so lon nhat
+
+13<>Cau lenh re nhanh switch Switch
+    Ex: var time = 2
+
+        switch(time):
+            case 2; (case la truong hop so sanh vi du case = 2 thi time === 2: True)
+                console.log("bay gio la 2 gio")
+                break; (break de ket thuc truong trinh)
+
+                *neu gap lot vao truong hop dung ma ko gap tu khoa "break" thi no se lot tiep xuong cac case ben duoi den khi het case
+
+                -su dung default: de in ra trong truong hop gia tri lot vao bi sai o tat ca cac case(luon viet default o cuoi)
+
+14<>Toan tu ba ngoi(Ternary operator)
+    course = {
+        coin = 250
+    }
+    
+    ve1(dieu kien) ? ve2(ve 1 lay gia tri khi dieu kien dung) : ve3(ve 1 lay gia tri  khi dieu kien sai)
+
+    var result = course.coin > 0 ? 'phai tra phi' : 'mien phi'
+
+    console.log(result)
+
+15<>Loop
+ -for -- lap voi dieu kien dung
+ -for/in -- lap qua key cua doi tuong
+ -for/of -- lap qua value cua doi tuong
+ -while -- lap khi dieu kien dung
+ -do/while -- lap it nhat 1 lan sau do lap tiep neu dieu kien dung
+
+    lam viec voi loop:
+        -for loop
+            Dinh nghia: for(dinh nghia bien; dieu kien; hanh dong tac dung len bien)
+            Ex: for (var i = 1; i <= 100; i++) {
+                console.log(i) // chay cho den khi i dat gia tri 100
+            }
+            *cac ve o trong vong lap ko bat buoc phai co, Ex: co the dua dinh nghia bien ra ngoai
+        
+        -for/in loop
+            dinh nghia: lap den khi het key trong object va lay ra key trong do
+
+            Ex: myInfo = {
+                name: "huy phong"
+                age: 18
+            }
+
+            for (var key in myInfo) {
+                console.log(key);
+            }
+            *trong truong hop muon lay value thi them [key cua object duoi dang string hoac chi viet "key" de lay het value]
+
+            *2: dung tuong tu voi Array(nhung key cua Array la so muon lay value thi lam nhu *) va String(key la dang so dem so ki ti cua chuoi neu muon in ra chu cai thi lam nhu *)
+        -for/of loop
+            khong su dung duoc voi object(neu muon dung thi phai bien doi)
+
+            Ex: var languages = {
+                'javascript',
+                'PHP',
+                'Python',
+            }
+
+            for (var value of languages) {
+                console.log(value)// output ra tung phan tu cua mang
+            }
+            *cach lay key/value cua object
+    var Object = {
+        myname: "huy phong",
+        age: 16,
+        [Mymail]:'huyphong@gmail.com',
+    }                
+
+        for (var value of Object.keys(Object)) {
+            console.log(value)// output ra keys
+        }
+
+        for (var value of Object.keys(Object)) {
+            console.log(Object[value])// output ra value 
+        }
+
+        for (var value of Object.keys(Object)) {
+            console.log(Object.value(Object))// output ra mang value
+        }
+
+        -While loop
+            Ex: var i = 0;
+
+            while (i < 1000//condition) {
+                i++;
+                console.log(i);
+            }
+        
+        -Do/while loop
+
+            Ex: do {
+                i++;
+
+                console.log(i)
+            } while (i < 1000)
+            :lap lan 1 ko can dieu kien sau do neu dieu kien dung thi se lap tiep
+        
+        -Break/continue trong loop
+            Break: dung vong lap
+            Continue: bo qua lan lap
+
+        -vong lap long nhau(Nested loop)
+            Ex: var myArray = [
+            [1,2],
+            [3,4],
+            [5,6]
+            ]
+
+            for (var i = 0; i < myArray.length; i++) {
+                for (var j = 0; j < myArray[i].length; j++) {
+                    console.log(myArray[i][j])                
+                }            
+            }
+
+            Bonus ve loop
+                Ex: for (var i = 0; i <= 100; i+= 5) {
+                    console.log(i)//i tang them 5 don vi 
+                }
+
+16<>Đệ quy  
+    -Định nghĩa: một hàm mà nó tự gọi   lại chính nó thì dó là đệ quy
+
+    -Đối tượng Set: có đặc tính unique          
+
+        Ex: var array = ['a','b','c','a','b','c,'a','b','c]
+
+        console.log(new Set());//vì có đặc tính unique nên nó sẽ ko in ra phần tử lặp lại giống nhau 
+
+        nếu muốn in ra là một Array
+        console.log([...(new Set(array))])
+
+    Bài toán đệ quy
+        function deQuy() {
+            deQuy();
+        }
+        
+        deQuy()// tạo ra vòng lặp vô hạn và làm cho JS bị tràn stack
+
+        *tránh dùng để quy nếu chưa hiểu rõ
+
+        khi làm đệ quy Đệ quy:
+        //1. xác định điểm dừng
+        //2. logic handle => tạo ra điểm dừng
+
+        bài toán về đệ quy
+        Bài toán: tạo ra ứng dụng countdown
+
+        Bài làm:
+                function countDown(num) { tạo ra function
+                     if (num > 0)// điểm dừng {
+                        console.log(num);//in ra giá trị của num
+                        return countDown(num - 1); // trả về hàm giá trị mới của num
+                    }
+                    return num; //trả về giá trị sai 
+                }
+
+                countDown(10);//truyền vào num
+
+
+17<>Callback
+    -la ham function 
+    -Truyen qua doi so
+    -Duoc goi lai (trong ham nhan doi so)
+
+    Ex:function myFunction(param) {
+        param('Hello world')
+    }
+        function myCallback(value) {
+            console.log('value:', value)
+        }
+
+        myFuction(myCallback);// dua vao param gia tri la func myCallback ==> luc nay param la cach goi khac cua myCallback ==> param co the thay myCallback nhan gia tri value ==> Output: Hello world
+
+
+
+18<>Else-if-else if
+    -Else-if-else if (menh de re nhanh) la menh de dung de check gia tri boolean cua dieu kien 
+    -Khoi lenh sau if se duoc thuc thi khi if nhan ra tri True 
+    -Neu la false thi khoi lenh else se duoc thuc hien
+    -ELse if duoc thuc hien khi khoi lenh if nhan gia tri False va else if nhan gia tri True
+    -Neu ca if va else if deu nhan gia tri la False thi khoi lenh sau else se duoc thuc hien
+19<>HTML-DOM
+    -DOM: Document Object Model - Khi web của chúng ta tải lên thì browser sẽ đọc và tạo ra DOM, browser sẽ đọc chuỗi HTML và tạo ra sơ đồ hình cây (DOM) 
+
+    -DOM có 3 thành phần: Element</the tag>, Attribute</the mo>, Text
+
+    -Node: Điểm giao nhau của DOM (Element, Attribute, Text) 
+
+    -Tiêu chuẩn của DOM được chia ra thành 3 phần khác nhau: Core DOM (quy chuẩn chung cho tất cả các tài liệu), XML DOM, HTML DOM
+
+    -Trong JavaScript không có DOM, JS chỉ là bộ công cụ để truy xuất vào HTML DOM
+
+    19.1<>Get element methods
+        -get the element through ID, class, CSS selector, tag, HTML collection
+
+        -use:var headingNode = document.getElementById('your id') //get element by ID *but you can get only one element by this method//
+
+        console.log(headingNode) or console.log({ element: headingNode;})
+
+        -var headingNodes = document.getElementsByClassName('your class')//get elements by class name * you can get multiple elements
+
+        console.log(headingNodes)
+
+        -var headingNodes = document.getElementsByTagName('heading')//get elements by tag name * you can get multiple elements
+
+        console.log(headingNodes)
+
+        -var headingNode = document.querySelector('html.box.heading2')//get element by CSS selector
+
+        -HTML collection 
+         Có một số thẻ được quy là html collection: img, a, form
+
+        -document.write(dùng để in ra nội dung) *phương thức được đặt ở đâu thì nội dung sẽ in ra ở đó
+
+    19.2<>Node Atribute && Node Text 
+
+        Element: các tag
+
+        Attribute Node: các thuộc tính trong thẻ mở
+
+        Text Node: nội dung giữa thẻ mở và thẻ đóng
+
+    19.3<>Dom attribute
+
+        Thêm attribute vào element:
+            Biến get elements.attribute = "nội dung của attribute"
+
+        *Thêm attribue chỉ được chạy khi file JS được chạy
+
+        Khi muốn thêm attribute mà ko cần phải hợp lệ với tag thì dùng phương thức
+            biến get element.setAttribute('thuộc tính')
+
+        Khi muốn lấy attribute thì dùng phương thức:
+            Biến get element.getAttribute('Tên thuộc tính')
+
+    19.4<>InnerText vs textContent Property
+
+        Để tương tác thì phải get ra được elements
+
+        Ex: var headingElements = document.querySelector('.box.box1')
+
+        muốn lấy nội dung thì dùng biến get element.innerText/textContent
+
+        muốn thay đổi nội dung thì thêm dấu = 'nội dung cần thay đổi'//* nếu thẻ tag được viết vào phần nội dung cần đổi thì thẻ tag sẽ ko còn hiểu là một element nx mà nó sẽ đổi thành cú pháp mã hóa
+
+        lấy ra giá trị gọi là geter
+
+        sửa đổi giá trị gọi là seter
+
+        innerText và textContent đều bỏ qua  tag
+
+        sự khác biệt giữa innerText và textContent
+
+        innerText trả lại những gì mà ta nhìn thấy,  
+
+        textContent trả lại tất cả những thứ trong text Node
+
+    19.5 InnerHTML vs OuterHTML Property
+
+        thêm một element vào trong một element khác
+
+        B1: get element
+
+        B2: sử dụng thuộc tính innerHTML hoặc outerHTML
+            innerHTML:
+            biến get element.innerHTML = 'element muốn thêm'
+
+        //nếu muốn lấy element thì 
+            tên biến get element.innerHTML
+            thuộc tính sẽ lấy ra hết tất cả mọi thứ trong thẻ
+
+
+            outerHTML
+
+            khi geter sẽ lấy ra chính element gọi đến nó
+
+            nếu sử dụng dưới dạng seter
+            nó sẽ ghi đè lên luôn element
+
+            nếu console.log ra cái biến get element sẽ vẫn ra element khi chưa bị đè vì nó được lưu trong bộ nhớ
+
+    19.6<>Node properties
+            TÌM HIỂU SAU
+
+    19.7<>DOM CSS
+            Object css style
+
+            B1: biến get element
+
+            B2: biến.style.thuộc tính(width, height,etc...)
+
+        cách khác:
+            Object.assign(biến.style, {
+                thuộc tính
+            })
+
+            EX:Object.assign.(biến.style, {
+                width: '200px'
+                height: '100px'
+            })
+
+            chỉ được dùng để CSS inline là dùng attribue: style
+
+
+    19.8<>classList Property
+            //add: thêm class
+            
+            //contains: kiểm tra xem element có chứa class cần kt ko 
+            
+            //remove: xóa class
+            
+            //toggle: kiểm tra xem element có class toggle cần tìm ko 
+            *nếu có thì xóa
+            *nếu không có thì thêm
+
+
+    19.9<>DOM events
+            Là các hành vi diễn ra trong DOM
+            +Là hành vi của người dùng và trình duyệt
+
+            Gồm có:
+                +Attribute events (phải thêm on vào trước evetnt)
+
+                +Assign event using element node (phải get ra element và thêm tiền tố on trước event)
+
+                    EX: var myEle = document.querySelector(a);
+
+                    myEle.onclick = function(e[nghĩa là mouse event]) {
+                        khi thực hiện event thì code trong này sẽ thực hiện
+                    }
+
+                    nếu muốn lấy ra chính element node mà ta muốn mà không cần dùng biến đã tạo thì dùng e.target
+
+    19.10<>PreventDefault and StopPropagation
+                1-PreventDefault dùng để ngăn chặn các hành vi mặc định của trình duyệt
+
+                2-StopPropagation dùng để ngăn chặn sự kiện nổi bọt
+                
+20<>JSON, Fetch, Postman        
+        
+    20.1<>JSON (JavaScript Object Notation)
+                 What is JSON?
+                    Là một định dạng dữ liệu (chuỗi) và JSON không phải là kiểu dữ liệu
+
+                JSON có thể thể hiện đc một số kiểu dữ liệu(1)
+                    Number, Boolean, Null, Array, Object, String
+
+                Có 2 thao tác: encode (mã hóa) và decode (giải mã)
+
+                hoặc đúng hơn là Stringify (từ JS sang JSON) và Parse (từ JSON sang JS)
+
+                Syntax: variable = 'viết dữ liệu trong này' bắt buộc phải có dấu nháy
+                    EX: var json = '1'
+
+                Nếu muốn truyền dữ liệu kiểu string hoặc các elements trong array thì phải thêm dấu " "
+                    EX: var json = '["JS", "PHP"]'
+                        var json = '"My name is Phong"'
+                
+                Nếu muốn truyền dữ liệu kiểu Object các key phải được bao trong dấu ""
+                    EX: var json = '{"name":"Dang Huy Phong"}'
+
+
+                Thao tác Parse (đổi từ JSON sang JS)
+                    Syntax: JSON.parse(biến chứa JSON)
+
+                Thao tác Stringify (đổi từ JS sang JSON)
+                    Syntax: JSON.stringify(kiểu dữ liệu của JS)
+                        EX: console.log(JSON.stringify([PHP, Python]))
+
+                            OUTPUT: ["PHP", "Python"]
+
+                Lưu ý: có một số kiểu dữ liệu không convert đc qua JSON: function và một số kiểu dữ liệu không đc liệt kê ở (1)
+
+    20.2<>Promise(sync, async)
+        Sync (đồng bộ)
+
+        Async (bất đồng bộ)
+            có một số phương thức cây bất đồng bộ: setTimeout, setInterval, fetch, XMLHttpRequest, file reading, request animation frame, etc
+
+
+    20.3<>Promise (concept)
+        Lý thuyết, cách hoạt động 
+
+        Promise có 3 trạng thái:
+        -Pending(trờ xử lý)
+        -Fulfilled(hoàn thành)
+        -Rejected(từ chối)
+
+        tạo đối tượng promise (Promise là một Obj constructor)
+        variable = new Promise(function(resolve, reject){logic xử lý})
+
+        EX: var promise = new Promise(function(){})
+
+        Khi cái function chúng ta biết nó thành công thì gọi đến resolve() còn khi thất bại thì gọi đên reject()
+
+        *nếu một trong 2 phương thức không được gọi thì sẽ gây ra hiện tượng memory leak(rò rỉ bộ nhớ)
+
+        promise sẽ trả ra 3 phương thức:
+            promise
+                .then() // được gọi khi resolve() được gọi
+                .cactch() // được gọi khi reject() được gọi
+                .finally() // được gọi khi một trong hai phương thức được gọi
+                    cả 3 phương thức đều nhận đối số là function
+
+        Một số đáp án cho câu hỏi lý thuyết:
+            Khái niệm Promise: promise được sinh ra để xử lý bất đồng bộ, trước khi có promise thì chúng ta phải dùng các function lồng vào nhau gây ra hiện tượng call back hell làm cho đoạn code rất là rồi rắm và promise được ra đời từ bản ES6
+
+            -Promise là một obj constructor nhận vào 2 đối số là resolve và reject, và nó sử dụng qua các phương thức là then được gọi khi resolve được gọi, catch được gọi khi reject đc gọi, finally được gọi khi cả một trong 2 phương thức được gọi
+
+    20.4<>Promise(chain)
+        Tính chất chuỗi
+        Promise có những thao tác phụ thuộc nhau và chạy song song,
+        Khi có nhiều các phương thức (ví dụ như .then) lồng vào nhau thì sẽ chạy theo tuần tự và khi phương thức đầu tiên return cái gì thì nó sẽ là cái input cho phương thức đằng sau.
+        *Nếu phương thức trên return ra 1 promise thì phương thức dưới sẽ phải chờ cho cái promise thực thi xong thì mới được chạy 
+        *Còn nếu không return ra promise thì sẽ chạy luôn phương thức phía dưới
+
+    20.5<>Promise methods (resolve, reject, all)
+        Nếu một chuỗi phương thức của promise lồng nhau mà một phương thức bị reject giữa đường thì lập tức chuỗi sẽ dừng lại và lọt vao thằng .catch()
+
+        Có thể tạo nhanh một promise luôn luôn ở trạng thái thành công hoặc thất bại bằng cách:
+        Variable = Promise.resolve(value)//luôn luôn thành công trừ khi có một .then() bị reject giữa đường
+
+        Variable = Promise.reject(value)//luôn luôn thất bại
+
+        .all([])//nhận đối số là một array và khi tất cả promise được truyền vào trong mảng xử lý xong thì .all sẽ được chạy
+
+        EX: var pro1 = new Promise(function(resolve) {
+            resolve([1])
+        })
+
+        var pro2 = new Promise(function(resolve) {
+            resolve([2])
+        })  
+
+        Promise.all([pro1, pro2]).then(function(result) {
+            console.log(result)
+        })
+
+        OUTPUT: [pro1,pro2]
+
+        *Nếu trong input của .all() có một promise bị reject thì nó sẽ không chạy nữa và lọt luôn vào .catch()
+
+    20.6<>Fetch
+        API: application programing interface (giao diện lập trình ứng dụng)
+        -Là cồng giao tiếp giữa các phần mềm
+
+        Fetch: sử dụng fetch để gọi lên cái api đó
+            Backend -> API -> Fetch -> JSON/XML
+            -Chi tiết:
+                Fetch sử dụng một promise
+                    syntax: fetc(URL)
+                        .then(function(response) {return response.json()}) //khi trả về reponse thì fetch sẽ trả về chuỗi JSON được định dạng sang JS type
+
+                        .catch(function(err) {}) //lọt vào catch khi gọi api có lỗi
+
+
+    20.7<>Postman
+    Những hành động để thao tác với dữ liệu là CRUD
+        -C:create//tạo --> POST
+        
+        -R:read//lấy --> GET
+        
+        -U:update//chỉnh sửa --> PUT/PATCH (sự khác nhau giữa PUT và PATCH,, PUT sẽ thay đổi dữ liệu được cho và xóa toàn bộ obj, PATCH cũng thay đổi dữ liệu được cho nhưng sẽ chỉ thay đổi ở phần được yêu cầu chứ không xóa toàn bộ obj)
+        
+        -D:delete//xóa --> DELETE
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+        
+
+
+            
+
+
+
+
+
+
+
+
+        
+        
+
+

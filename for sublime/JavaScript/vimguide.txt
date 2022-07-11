@@ -1,0 +1,82 @@
+3.2. Insert mode
+Đây là mode dùng để thay đổi nội dung, chèn kí tự vào file.
+
+Phím tắt vào insert mode:
+
+i - Chèn vào ngay trước vị trí hiện tại của con trỏ
+
+a - Chèn vào ngay sau vị trí hiện tại của con trỏ
+
+I - Chèn vào ngay đầu dòng hiện tại
+
+A - Chèn vào ngay cuối dòng hiện tại
+
+3.3. Visual mode
+Mode này cho phép bạn chọn các vùng văn bản để thao tác với chúng(bôi đen) (vd như chọn một vùng văn bản để copy, cut, delete).
+
+Phím tắt vào visual mode:
+
+v - Lựa chọn vùng(bôi đen) ngay tại vị trí con trỏ hiện tại, lựa chọn vùng bôi đen bằng cách sử dụng các phím điều hướng mũi tên lên, xuống, phải, trái
+
+V - Lựa chọn vùng theo nguyên dòng, điểu chỉnh vùng chọn bằng phím lên, xuống
+
+3.4. Command mode
+Mode này dùng để thao tác các lệnh trong Vim, chẳng hạn như lưu nội dung đã được thực hiện ở các mode khác, thoát khỏi Vim,...
+
+Phím tắt để vào mode command: :
+
+4. Tập hợp các câu lệnh và phím tắt trong Vim
+Mở file với Vim:
+$ vim file_name hoặc $ vi file_name
+
+Các phím di chuyển con trỏ:
+Ngoài các phím mũi tên thì ta có thể sử dụng các phím sau để điều hướng con trỏ:
+
+h - sang trái
+
+l - sang phải
+
+k - lên
+
+j - xuống
+
+gg - lên đầu file với ký tự đầu dòng
+
+G - xuống dưới cùng file với ký tự đầu dòng
+
+10G hoặc :10 - nhảy đến dòng thứ 10 của file
+
+Ctrl + G - xem thông tin của dòng hiện tại (vd đang ở dòng thứ mấy của file, cột số mấy,...)
+
+w) - từ kế tiếp
+
+e - kết thúc của từ hiện tại
+
+0 - đến đầu dòng
+
+$ - đến cuối dòng
+
+% - di chuyển đến các ngoặc trong dòng
+
+[[ - nhảy đến nơi bắt đầu function
+
+Các lệnh Copy, Cut và Paste
+y - copy phần text đã chọn vào clipboard
+
+yy - copy dòng hiện tại
+
+y$ - copy đến cuối dòng
+
+D - copy đến cuối file
+
+p - paste
+
+dd - cut dòng hiện tại
+
+Ctrl + shift + tab de qua lai giua cac file (chay tu file dau tien)
+
+Ctrl + tab de qua lai giua cac file (chay tu file cuoi cung)
+
+vào chế độ normal mode
+:wq để lưu và tắt file
+:q! để tắt file nhưng ko lưu
