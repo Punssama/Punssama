@@ -182,8 +182,8 @@
 
 //tinh giai thua
 /**
-	* Sử dụng vòng lặp for...of để tính tích của các phần tử trong một array gồm các số
-	*/
+  * Sử dụng vòng lặp for...of để tính tích của các phần tử trong một array gồm các số
+  */
 
 
 //sử dụng vòng lặp for in để in ra một mảng gồm các key của obj mẹ cho trước, mảng bao gồm cả key của nested object(object lồng object)

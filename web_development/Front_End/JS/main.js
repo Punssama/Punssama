@@ -162,153 +162,157 @@
 //
 
 //==========start,get/renderCourse==========
-var courseAPI = 'http://localhost:3000/courses';
-var sub_patchBtn = document.querySelector('#submit');
+// var courseAPI = 'http://localhost:3000/courses';
+// var sub_patchBtn = document.querySelector('#submit');
 
-function start() {
-    handleForm();
-    getCourses(renderCourses);
-}
+// function start() {
+//   handleForm();
+//   getCourses(renderCourses);
+// }
 
-start();
+// start();
 
-function getCourses(callback) {
-    fetch(courseAPI)
-        .then(function(response) {
-            return response.json();
-        })
+// function getCourses(callback) {
+//   fetch(courseAPI)
+//     .then(function(response) {
+//       return response.json();
+//     })
 
-        .then(callback);
-    }
+//     .then(callback);
+// }
 
-function renderCourses(courses) {
-    var coursesList = document.querySelector('#list_courses');
-    var htmls = courses.map(function(courses) {
-        // body...
-        return `
-        <li class="course-item-${courses.id}">
-            <h4>${courses.name}</h4>
-            <p>${courses.description}</p>
-            <button onclick="removeCourse(${courses.id})">Remove</button>
-            <button onclick="onChange(${courses.id})">Change</button>
+// function renderCourses(courses) {
+//   var coursesList = document.querySelector('#list_courses');
+//   var htmls = courses.map(function(courses) {
+//     // body...
+//     return `
+//         <li class="course-item-${courses.id}">
+//             <h4>${courses.name}</h4>
+//             <p>${courses.description}</p>
+//             <button onclick="removeCourse(${courses.id})">Remove</button>
+//             <button onclick="onChange(${courses.id})">Change</button>
 
-        </li> `;
-    });
-    coursesList.innerHTML = htmls.join('');
-}
+//         </li> `;
+//   });
+//   coursesList.innerHTML = htmls.join('');
+// }
 
-//==========Create course/change course==========
-//handle Form
-function handleForm(id) {
-    //createCourse
-    if (sub_patchBtn.innerText === "Submit" || sub_patchBtn.innerText === "SUBMIT" ) {
-        sub_patchBtn.onclick = function() {
-            var name = document.querySelector('input[name = "name"]').value;
-            var description = document.querySelector('input[name = "description"]').value;
-            var form_ = {
-                name: name,
-                description: description,
-            };
-            createCourse(form_);
-        };
-    } else if (sub_patchBtn.innerText === "Save" || sub_patchBtn.innerText === "SAVE") {
-        //PUT course
-        sub_patchBtn.onclick = function(id) {
-            var edit_id = window.value; 
-            var editedName = document.querySelector('input[name = "name"]').value;
-            var editedDes = document.querySelector('input[name = "description"]').value;
-            var form__ = {
-                name: editedName,
-                description: editedDes
-            };
-            var options = {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(form__)
+// //==========Create course/change course==========
+// //handle Form
+// function handleForm(id) {
+//   //createCourse
+//   if (sub_patchBtn.innerText === "Submit" || sub_patchBtn.innerText === "SUBMIT") {
+//     sub_patchBtn.onclick = function() {
+//       var name = document.querySelector('input[name = "name"]').value;
+//       var description = document.querySelector('input[name = "description"]').value;
+//       var form_ = {
+//         name: name,
+//         description: description,
+//       };
+//       createCourse(form_);
+//     };
+//   } else if (sub_patchBtn.innerText === "Save" || sub_patchBtn.innerText === "SAVE") {
+//     //PUT course
+//     sub_patchBtn.onclick = function(id) {
+//       var edit_id = window.value;
+//       var editedName = document.querySelector('input[name = "name"]').value;
+//       var editedDes = document.querySelector('input[name = "description"]').value;
+//       var form__ = {
+//         name: editedName,
+//         description: editedDes
+//       };
+//       var options = {
+//         method: 'PUT',
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(form__)
 
-            };
+//       };
 
-            fetch(courseAPI + "/" + edit_id, options)
-                .then(function(response) {
-                    response.json();
-                })
+//       fetch(courseAPI + "/" + edit_id, options)
+//         .then(function(response) {
+//           response.json();
+//         })
 
-                .then(function() {
-                    //reset value + render 
-                    var editedName = document.querySelector('input[name = "name"]').value = "";
-                    var editedDes = document.querySelector('input[name = "description"]').value  = "";
-                    getCourses(renderCourses);
-                    sub_patchBtn.innerText = "Submit";
-                    handleForm();
-                });
-            };
-        }
-    }
+//         .then(function() {
+//           //reset value + render
+//           var editedName = document.querySelector('input[name = "name"]').value = "";
+//           var editedDes = document.querySelector('input[name = "description"]').value = "";
+//           getCourses(renderCourses);
+//           sub_patchBtn.innerText = "Submit";
+//           handleForm();
+//         });
+//     };
+//   }
+// }
 
-//POST and render course function
-function createCourse(data, callback) {
-    var options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+// //POST and render course function
+// function createCourse(data, callback) {
+//   var options = {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(data)
 
-    };
+//   };
 
-    fetch(courseAPI, options)
-        .then(function(response) {
-            response.json();
-        })
+//   fetch(courseAPI, options)
+//     .then(function(response) {
+//       response.json();
+//     })
 
-        .then(function() {
-            getCourses(renderCourses);
-        });
-}
+//     .then(function() {
+//       getCourses(renderCourses);
+//     });
+// }
 
-//save button + input value function
-function onChange(id) {
-    window.value = id;
-    var patch_id = id - 1;
-    var patch_name = document.querySelectorAll(`h4`)[patch_id].innerText;
-    var patch_des = document.querySelectorAll(`p`)[patch_id].innerText;
-    console.log(patch_name);
-    var inputPatchName = document.querySelector('input[name = "name"]').value = patch_name;
-    var inputPatchDes = document.querySelector('input[name = "description"]').value = patch_des;
-    sub_patchBtn.innerText = "Save";
-    handleForm();
-
-
+// //save button + input value function
+// function onChange(id) {
+//   window.value = id;
+//   var patch_id = id - 1;
+//   var patch_name = document.querySelectorAll(`h4`)[patch_id].innerText;
+//   var patch_des = document.querySelectorAll(`p`)[patch_id].innerText;
+//   console.log(patch_name);
+//   var inputPatchName = document.querySelector('input[name = "name"]').value = patch_name;
+//   var inputPatchDes = document.querySelector('input[name = "description"]').value = patch_des;
+//   sub_patchBtn.innerText = "Save";
+//   handleForm();
 
 
-//==========Remove Course==========
-function removeCourse(id) {
-    var options = {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json'
-        }
 
 
-    };
+//   //==========Remove Course==========
+//   function removeCourse(id) {
+//     var options = {
+//       method: 'DELETE',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       }
 
-    fetch(courseAPI + '/' + id, options)
-        .then(function(response) {
-            response.json();
-        })
 
-        .then(function() {
-            var courseItem = document.querySelector("course-item-" + id);
-            if (courseItem) {
-                courseItem.remove();
-            }
-        })
+//     };
 
-        .then(function() {
-            getCourses(renderCourses);
-            sub_patchBtn.innerText = "Submit";
-            handleForm();
-        });
-}
+//     fetch(courseAPI + '/' + id, options)
+//       .then(function(response) {
+//         response.json();
+//       })
+
+//       .then(function() {
+//         var courseItem = document.querySelector("course-item-" + id);
+//         if (courseItem) {
+//           courseItem.remove();
+//         }
+//       })
+
+//       .then(function() {
+//         getCourses(renderCourses);
+//         sub_patchBtn.innerText = "Submit";
+//         handleForm();
+//       });
+//   } 
+var button = document.querySelector("#demo").onclick = function() {
+   console.log("input")
+ }
+
