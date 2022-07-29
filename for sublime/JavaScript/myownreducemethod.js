@@ -18,8 +18,10 @@
 
 // const myAr = [1,2,3,4,5]
 
-// const myresult = myAr.myreduce(function the_result(total, currentnum) {
-// 	return total + currentnum
+// const myresult = myAr.reduce(function the_result(total, currentnum,index) {
+//   console.log('total:',total);
+// 	var hello = 0
+//   return hello+=index;
 // }, 10)
 
 
@@ -201,20 +203,20 @@
 
 
 
-//  var resultArr = [];
-//  function getObjectKey(obj, keys) {
-//  	for(var key in obj) {
-//  		console.log(`this is the key: ${key}`)
-//  		console.log('this is value:', obj[key]);
-//  		console.log('this is the type:', typeof obj[key]);
-//  		resultArr[pus[tke[)[
-//  		if (typeof obj[key] === 'object') {	//diem dung kiem tra value
-//  			return getObjectKey(obj[key])
-//  		}
-//  	}
-//  	return resultArr
-//  }
+//   var resultArr = [];
+//   function getObjectKey(obj, keys) {
+//   	for(var key in obj) {
+//   		console.log(`this is the key: ${key}`)
+//   		console.log('this is value:', obj[key]);
+//   		console.log('this is the type:', typeof obj[key]);
+//   		resultArr[pus[tke[)[
+//   		if (typeof obj[key] === 'object') {	//diem dung kiem tra value
+//   			return getObjectKey(obj[key])
+//   		}
+//   	}
+//   	return resultArr
+//   }
+// console.log(getObjectKey(apartment))
 
-//  console.log(getObjectKey(apartment))
 
 

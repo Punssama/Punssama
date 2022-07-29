@@ -10,7 +10,7 @@
 
 2<>Toan tu gan
     = ==> gan gia tri ben phai cho ben trai
-    x += y ==> x = x+y  
+    x += y ==> x = x+y { 
     x -= y ==> x = x-y
     x *= y ==> x = x*y
     x /= y ==> x = x/y
@@ -244,7 +244,7 @@
                 {
                     Python: 180 coin
                 }]
-ô
+
                 
                 
                 
@@ -670,7 +670,7 @@ Ex: User.prototype.program = 'Hello world'
             +Là hành vi của người dùng và trình duyệt
 
             Gồm có:
-                +Attribute events (phải thêm on vào trước evetnt)
+                +Attribute events (phải thêm on vào trước event)
 
                 +Assign event using element node (phải get ra element và thêm tiền tố on trước event)
 
@@ -814,6 +814,29 @@ Ex: User.prototype.program = 'Hello world'
         -U:update//chỉnh sửa --> PUT/PATCH (sự khác nhau giữa PUT và PATCH,, PUT sẽ thay đổi dữ liệu được cho và xóa toàn bộ obj, PATCH cũng thay đổi dữ liệu được cho nhưng sẽ chỉ thay đổi ở phần được yêu cầu chứ không xóa toàn bộ obj)
         
         -D:delete//xóa --> DELETE
+
+21.ECMAScript 6+ 
+    21.1-Let/Const
+        K/n: let và var giống nhau đều dùng để khai bao biến và có thể bị ghi đè
+
+             Const cũng dùng để khai baó biến nhưng không thể bị ghi đè
+        
+        Code block: là những cặp ngoặc của if else, loop, {}, ...
+        Let, const và var đều có thể dùng để khai báo biến trong code block nhưng let,const chỉ execute đc trong scope của nó
+        
+        Nếu có nhiều code block lồng vào nhau thì JS sẽ ưu tiên code block lớn nhất
+
+        Hoisting 
+        ví dụ: var a;
+               a=1;
+        Lưu ý chỉ có:var đc hỗ trợ hoisting
+        
+        Keywords:
+        -Code block
+        -Scope:phạm vi truy cập
+        -Hoisting
+
+
 
 
 
